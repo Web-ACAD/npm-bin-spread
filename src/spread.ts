@@ -48,7 +48,7 @@ export function spreadBinaries(source: string, targets: Array<string>): number
 				fs.unlinkSync(targetBinary);
 			}
 
-			fs.symlinkSync(binary, targetBinary);
+			fs.symlinkSync(binary, targetBinary, 'junction');
 		}
 	}
 
